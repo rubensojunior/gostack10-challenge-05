@@ -73,3 +73,11 @@ export const List = styled.ul`
     }
   }
 `
+
+export const Input = styled.input`
+  ${props =>
+    props.error &&
+    css`
+      border: 1px solid red !important;
+    `}
+`

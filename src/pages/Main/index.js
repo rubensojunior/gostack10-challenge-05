@@ -5,12 +5,18 @@ import { Link } from 'react-router-dom'
 import api from '../../services/api'
 
 import Container from '../../components/Container'
-import { Form, SubmitButton, List } from './styles'
+import { Form, SubmitButton, List, Input } from './styles'
 
 export default class Main extends Component {
   constructor() {
     super()
-    this.state = { newRepo: '', repositories: [], loading: false }
+
+    this.state = {
+      newRepo: '',
+      repositories: [],
+      loading: false,
+      error: false,
+    }
   }
 
   componentDidMount() {
@@ -38,23 +44,39 @@ export default class Main extends Component {
 
     this.setState({ loading: true })
 
-    const { newRepo, repositories } = this.state
+    try {
+      const { newRepo, repositories } = this.state
 
-    const response = await api.get(`/repos/${newRepo}`)
+      if (repositories.some(repository => repository.name === newRepo)) {
+        throw new Error('Repositório duplicado')
+      }
 
-    const data = {
-      name: response.data.full_name,
+      const response = await api.get(`/repos/${newRepo}`)
+
+      const data = {
+        name: response.data.full_name,
+      }
+
+      this.setState({
+        repositories: [...repositories, data],
+        newRepo: '',
+        loading: false,
+        error: false,
+      })
+    } catch (err) {
+      if (!err.response) {
+        alert(err)
+      }
+
+      this.setState({
+        loading: false,
+        error: true,
+      })
     }
-
-    this.setState({
-      repositories: [...repositories, data],
-      newRepo: '',
-      loading: false,
-    })
   }
 
   render() {
-    const { newRepo, loading, repositories } = this.state
+    const { newRepo, loading, repositories, error } = this.state
 
     return (
       <Container>
@@ -64,11 +86,12 @@ export default class Main extends Component {
         </h1>
 
         <Form onSubmit={this.handleSubmit}>
-          <input
+          <Input
             type="text"
             placeholder="Adicionar repositório"
             value={newRepo}
             onChange={this.handleInputChange}
+            error={error}
           />
           <SubmitButton loading={loading}>
             {loading ? (
