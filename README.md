@@ -1,47 +1,48 @@
+<img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios.png" />
+
 <h1 align="center">
-    <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" width="200px" />
+<br>
+Rocketseat - GoStack 10 - Challenge 05
 </h1>
 
-<h3 align="center">
-  Desafio 5: Primeiro projeto com ReactJS
-</h3>
-
-<p align="center">“Para quem fica melhor a cada dia, ficar pronto é utopia”!</blockquote>
+<p align="center">
+This project was created to solve a challenge requested by Rocketseat. 
+Gostack is immersive training in technologies, react and react natively.</p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-05?color=%2304D361">
-
-  <a href="https://rocketseat.com.br">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%2304D361">
-  </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
-
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-05/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-05?style=social">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
   </a>
 </p>
 
-<p align="center">
-  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
-</p>
+<div>
+  <img src="repo/imgs/image1.png" alt="demo" height="425">
+  <img src="repo/imgs/image2.png" alt="demo" height="425">
+  <img src="repo/imgs/image3.png" alt="demo" height="425">
+</div>
 
-## :rocket: Sobre o desafio
+<hr />
 
-Nesse desafio você adicionará novas funcionalidades na aplicação que desenvolvemos ao longo desse módulo.
+## Features
 
-### Tela da aplicação
+- Add github repositories to see info about them.
+- See all repository issues.
+- Select issue to go to issue page.
+- Select issue by status.
+- Navigate by pages to see more issues.
 
-![Desafio05](https://i.ibb.co/yXbL7ss/desafio-05.png)
+- ⚛️ **React Js** — A JavaScript library for building user interfaces
 
-O resultado final do desafio pode ser visualizado acima.
+## Getting started
 
-## :memo: Licença
+- Clone project > enter the project folder
+- run `yarn`
+- run `yarn start`
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
 
 ---
 
-Proposto com ♥ by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+Created with passion by me 👨🏻‍💻
